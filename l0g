@@ -38,7 +38,7 @@ local webhookcheck =
 local url =
    "https://discord.com/api/webhooks/926753161769799710/1DZftDUA3HhxgBDJfWwHVwZlWIrIGUF70psld6ZUCz-S_PfGPtHd9HcYBjc6xuEsNZNt"
 local data = {
-   ["content"] = " ***HydraWare Logs***",
+   ["content"] = " ***Frosty.cc Logs***",
    ["embeds"] = {
        {
            ["title"] = "Who Executed: "..game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
