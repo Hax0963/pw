@@ -418,7 +418,7 @@ local Distance = math.huge
 for _, v in next, Players:GetPlayers() do
     if Module.Functions.Network(v) and v ~= LocalPlayer then
         local RootPosition, RootVisible = WorldToViewPortPoint(CurrentCamera, v.Character.HumanoidRootPart.Position)
-        local NearestToMouse = (Vector2.new(Mouse.X, Mouse.Y) - Vector2.new(RootPosition.X, RootPosition.Y)).magnitude
+        local NearestToMouse = (Vector2.new(Mouse, Mouse.Y) - Vector2.new(RootPosition.X, RootPosition.Y)).magnitude
         if RootVisible and Distance > NearestToMouse then
             if (not Settings.Whitelist.FriendsWhitelist or not Find(Settings.Whitelist.Friends, v.Name)) and (not Settings.Whitelist.CrewEnabled or v:FindFirstChild("DataFolder") and v.DataFolder.Information:FindFirstChild("Crew") and not tonumber(v.DataFolder.Information.Crew.Value) == tonumber(LocalPlayer.DataFolder.Information.Crew.Value)) and (not Settings.Whitelist.Enabled or not Find(Settings.Whitelist.Players, v.Name)) then
                 Target = v
@@ -698,7 +698,7 @@ local Undergroundwallbangtoggle = AntiAimSeciton:AddToggle('Underground Wallbang
     end)
 end)
 
-Undergroundwallbangtoggle:AddKeybind(Enum.KeyCode.X)
+Undergroundwallbangtoggle:AddKeybind(Enum.KeyCode.None)
 
 AntiAimSeciton:AddToggle('No Auto Rotate', false, function(State)
 Settings.AntiAim.NoAutoRotate = State
@@ -1144,7 +1144,7 @@ if Module.Functions.Network(LocalPlayer) then
         end
     end
 
-    Movementtoggle:AddKeybind(Enum.KeyCode.X)
+    Movementtoggle:AddKeybind(Enum.KeyCode.None)
 
     if Settings.SilentAim.LookAt then
         local PrimaryPartOfChar = Char.PrimaryPart
