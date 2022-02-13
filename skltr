@@ -698,7 +698,7 @@ local Undergroundwallbangtoggle = AntiAimSeciton:AddToggle('Underground Wallbang
     end)
 end)
 
-Undergroundwallbangtoggle:AddKeybind(Enum.KeyCode.None)
+Undergroundwallbangtoggle:AddKeybind(Enum.KeyCode.M)
 
 AntiAimSeciton:AddToggle('No Auto Rotate', false, function(State)
 Settings.AntiAim.NoAutoRotate = State
@@ -1144,7 +1144,7 @@ if Module.Functions.Network(LocalPlayer) then
         end
     end
 
-    Movementtoggle:AddKeybind(Enum.KeyCode.None)
+    Movementtoggle:AddKeybind(Enum.KeyCode.M)
 
     if Settings.SilentAim.LookAt then
         local PrimaryPartOfChar = Char.PrimaryPart
